@@ -39,12 +39,12 @@ public class TondeuseTest {
     public void avancerTondeuse_PositionFinale() {
         TondeuseRecord tondeuseRecord = new TondeuseRecord(1, 1, "N", instructions);
         tondeuseRecord = tondeuseRecord.avancer(5, 5);
-        Assertions.assertEquals("1 2 N", tondeuseRecord.toString());
+        Assertions.assertEquals("1 2 N ADG", tondeuseRecord.toString());
     }
 
     @Test
     public void tournerADroiteTondeuse_isPositionFinale() {
-        String positionFinale = "1 1 E";
+        String positionFinale = "1 1 E ADG";
         TondeuseRecord tondeuseRecord = new TondeuseRecord(1, 1, "N", instructions);
         tondeuseRecord = tondeuseRecord.tournerADroite();
         Assertions.assertEquals(positionFinale, tondeuseRecord.toString());
@@ -54,7 +54,7 @@ public class TondeuseTest {
     public void tournerAGaucheTondeuse_isPositionFinale() {
         TondeuseRecord tondeuseRecord = new TondeuseRecord(1, 1, "N", instructions);
         tondeuseRecord = tondeuseRecord.tournerAGauche();
-        Assertions.assertEquals("1 1 W", tondeuseRecord.toString());
+        Assertions.assertEquals("1 1 W ADG", tondeuseRecord.toString());
     }
 
     private Pelouse creerPelouse(String taillePelouse) {

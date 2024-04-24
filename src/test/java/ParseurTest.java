@@ -15,7 +15,7 @@ public class ParseurTest {
 
     @Test
     public void fichierAvecUneTondeuse_parser_pelouseEtTondeuse() throws FileNotFoundException {
-        File file = new File("testUneTondeuse.txt");
+        File file = new File("src/main/resources/testUneTondeuse.txt");
         creerPelouseEtTondeuse(file);
         Assertions.assertTrue(file.exists());
         Assertions.assertEquals(5, this.pelouse.getX());
@@ -26,7 +26,7 @@ public class ParseurTest {
 
     @Test
     public void fichierAvecListeTondeuses_parser_pelouseEtDesTondeuses() throws FileNotFoundException {
-        File file = new File("testListeTondeuses.txt");
+        File file = new File("src/main/resources/testListeTondeuses.txt");
         creerPelouseEtDesTondeuses(file);
         Assertions.assertTrue(file.exists());
         Assertions.assertEquals(5, this.pelouse.getX());

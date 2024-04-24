@@ -17,7 +17,7 @@ public class CommandeTest {
 
     @Test
     public void executerCommande_positionFinaleDesTondeuse() throws FileNotFoundException {
-        File file = new File("testCommande.txt");
+        File file = new File("src/main/resources/testCommande.txt");
         this.positionsFinales =  executerCommandes(file);
         Assertions.assertEquals(5, this.pelouse.getX());
         Assertions.assertEquals(5, this.pelouse.getY());
